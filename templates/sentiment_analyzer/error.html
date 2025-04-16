@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Error - Comment Sentiment Analyzer{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h2 class="h4 mb-0">Error Processing CSV</h2>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-danger">
+                    <p>{{ error }}</p>
+                </div>
+                
+                <a href="{% url 'home' %}" class="btn btn-primary">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
