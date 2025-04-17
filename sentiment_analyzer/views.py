@@ -25,7 +25,7 @@ def analyze(request, file_id):
     file_path = os.path.join(settings.MEDIA_ROOT, str(csv_file.file))
     
     # Read the CSV file
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(file_path, encoding="ISO-8859-1")
     
     # Find comment column or use the first column
     comment_column = None
