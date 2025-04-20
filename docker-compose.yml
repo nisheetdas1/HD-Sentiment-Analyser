@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: nisheetdas1/hd-sentiment-analyzer
+    container_name: hd-sentiment-analyzer
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    volumes:
+      - ./media:/app/media
