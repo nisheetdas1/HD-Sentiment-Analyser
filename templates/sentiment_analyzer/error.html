@@ -1,22 +1,25 @@
 {% extends 'base.html' %}
 
-{% block title %}Error - Comment Sentiment Analyzer{% endblock %}
+{% block title %}Error - Harley Davidson Sentiment Analyzer{% endblock %}
 
 {% block content %}
 <div class="row">
     <div class="col-md-8 offset-md-2">
         <div class="card">
-            <div class="card-header bg-danger text-white">
-                <h2 class="h4 mb-0">Error Processing CSV</h2>
+            <div class="card-header harley-card-header">
+                <h2 class="h4 mb-0">ENGINE TROUBLE</h2>
             </div>
             <div class="card-body">
-                <div class="alert alert-danger">
-                    <p>{{ error }}</p>
+                <div class="alert alert-harley-danger p-4">
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; color: #000;">ERROR PROCESSING CSV</h4>
+                    <p style="font-weight: 500; margin-top: 10px;">{{ error }}</p>
                 </div>
                 
-                <a href="{% url 'home' %}" class="btn btn-primary">
-                    Back to Home
-                </a>
+                <div class="text-center mt-4">
+                    <a href="{% url 'home' %}" class="btn btn-harley">
+                        BACK TO GARAGE
+                    </a>
+                </div>
             </div>
         </div>
     </div>

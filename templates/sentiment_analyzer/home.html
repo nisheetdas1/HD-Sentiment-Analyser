@@ -1,50 +1,50 @@
 {% extends 'base.html' %}
 
-{% block title %}Upload CSV - Comment Sentiment Analyzer{% endblock %}
+{% block title %}Upload CSV - Harley Davidson Sentiment Analyzer{% endblock %}
 
 {% block content %}
 <div class="row">
     <div class="col-md-8 offset-md-2">
         <div class="card">
-            <div class="card-header bg-primary text-white">
-                <h2 class="h4 mb-0">Upload CSV File with Comments</h2>
+            <div class="card-header harley-card-header">
+                <h2 class="h4 mb-0">UPLOAD YOUR FEEDBACK CSV</h2>
             </div>
             <div class="card-body">
                 <p class="mb-4">
-                    Upload a CSV file containing comments to analyze their sentiment. 
-                    The application will automatically detect the comment column.
+                    Upload a CSV file containing rider comments to analyze sentiment. 
+                    Our engine will automatically detect the comment column.
                 </p>
                 
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     
-                    <div class="mb-3">
-                        <label for="{{ form.file.id_for_label }}" class="form-label">Select CSV file</label>
+                    <div class="mb-4">
+                        <label for="{{ form.file.id_for_label }}" class="form-label">SELECT YOUR CSV FILE</label>
                         {{ form.file }}
                         {% if form.file.errors %}
-                            <div class="text-danger">
+                            <div class="text-danger mt-2">
                                 {{ form.file.errors }}
                             </div>
                         {% endif %}
                     </div>
                     
-                    <div class="alert alert-info mb-4">
-                        <h5>CSV Format:</h5>
-                        <p class="mb-0">
-                            Your CSV should contain a column with comments. The application will try to detect
-                            a column with "comment" in its name, or will use the first column.
+                    <div class="alert alert-harley-info mb-4">
+                        <h5 style="color: #f7941d; text-transform: uppercase; letter-spacing: 1px;">CSV Format Guide:</h5>
+                        <p class="mb-2">
+                            Your CSV should contain a column with customer comments. The system will automatically detect
+                            a column with "comment" in its name, or will default to the first column.
                         </p>
-                        <hr>
-                        <p class="mb-0">Example CSV structure:</p>
-                        <pre>comment
-"This product is amazing! I love it."
-"Service was terrible, won't come back."
-"It's okay, nothing special."</pre>
+                        <hr style="border-color: #f7941d; opacity: 0.5;">
+                        <p class="mb-2" style="font-weight: 600;">Example CSV structure:</p>
+                        <pre style="background-color: #f0f0f0; border-left: 3px solid #f7941d; padding: 10px;">comment
+"This Harley is amazing! Love the power and sound."
+"Service at the dealership was poor, won't go back."
+"Bike is okay, nothing special for the price."</pre>
                     </div>
                     
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">
-                            Upload and Analyze
+                        <button type="submit" class="btn btn-harley">
+                            ANALYZE FEEDBACK
                         </button>
                     </div>
                 </form>

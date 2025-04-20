@@ -1,54 +1,54 @@
 {% extends 'base.html' %}
 
-{% block title %}Analysis Results - Comment Sentiment Analyzer{% endblock %}
+{% block title %}Analysis Results - Harley Davidson Sentiment Analyzer{% endblock %}
 
 {% block content %}
 <div class="row mb-4">
     <div class="col-12">
         <div class="card">
-            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                <h2 class="h4 mb-0">Results: {{ file_name }}</h2>
-                <a href="{% url 'home' %}" class="btn btn-light btn-sm">Analyze Another File</a>
+            <div class="card-header harley-card-header d-flex justify-content-between align-items-center">
+                <h2 class="h4 mb-0">FEEDBACK ANALYSIS: {{ file_name }}</h2>
+                <a href="{% url 'home' %}" class="btn btn-harley-outline btn-sm">Analyze Another File</a>
             </div>
             <div class="card-body">
-                <h3 class="h5 mb-3">Summary</h3>
+                <h3 class="h5 mb-3" style="text-transform: uppercase; letter-spacing: 1px; color: #000;">RIDER FEEDBACK SUMMARY</h3>
                 <div class="row mb-4">
                     <div class="col-md-6">
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Comment Column
-                                <span class="badge bg-primary rounded-pill">{{ comment_column }}</span>
+                                <strong>COMMENT COLUMN</strong>
+                                <span class="badge badge-harley-dark rounded-pill">{{ comment_column }}</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Total Comments
-                                <span class="badge bg-primary rounded-pill">{{ total_comments }}</span>
+                                <strong>TOTAL COMMENTS</strong>
+                                <span class="badge badge-harley-dark rounded-pill">{{ total_comments }}</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Positive Comments
-                                <span class="badge bg-success rounded-pill">{{ positive_count }}</span>
+                                <strong>POSITIVE FEEDBACK</strong>
+                                <span class="badge badge-harley rounded-pill">{{ positive_count }}</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Negative Comments
-                                <span class="badge bg-danger rounded-pill">{{ negative_count }}</span>
+                                <strong>NEGATIVE FEEDBACK</strong>
+                                <span class="badge badge-harley-dark rounded-pill">{{ negative_count }}</span>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <div class="card">
-                            <div class="card-header">
-                                <h4 class="h6 mb-0">Sentiment Distribution</h4>
+                            <div class="card-header harley-card-header">
+                                <h4 class="h6 mb-0">SENTIMENT DISTRIBUTION</h4>
                             </div>
                             <div class="card-body">
-                                <div class="progress" style="height: 25px;">
-                                    <div class="progress-bar bg-success" role="progressbar" 
+                                <div class="progress" style="height: 30px;">
+                                    <div class="progress-bar positive-bar" role="progressbar" 
                                          style="width: {{ positive_percentage }}%" 
                                          aria-valuenow="{{ positive_percentage }}" aria-valuemin="0" aria-valuemax="100">
-                                        {{ positive_percentage|floatformat:1 }}% Positive
+                                        {{ positive_percentage|floatformat:1 }}% POSITIVE
                                     </div>
-                                    <div class="progress-bar bg-danger" role="progressbar" 
+                                    <div class="progress-bar negative-bar" role="progressbar" 
                                          style="width: {{ negative_percentage }}%" 
                                          aria-valuenow="{{ negative_percentage }}" aria-valuemin="0" aria-valuemax="100">
-                                        {{ negative_percentage|floatformat:1 }}% Negative
+                                        {{ negative_percentage|floatformat:1 }}% NEGATIVE
                                     </div>
                                 </div>
                             </div>
@@ -56,15 +56,15 @@
                     </div>
                 </div>
                 
-                <h3 class="h5 mb-3">Detailed Results</h3>
+                <h3 class="h5 mb-3" style="text-transform: uppercase; letter-spacing: 1px; color: #000; border-bottom: 2px solid #f7941d; padding-bottom: 8px;">DETAILED FEEDBACK ANALYSIS</h3>
                 <div class="table-responsive">
-                    <table class="table table-striped table-hover">
-                        <thead class="table-dark">
+                    <table class="table table-striped table-hover harley-table">
+                        <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Comment</th>
-                                <th>Sentiment</th>
-                                <th>Confidence</th>
+                                <th>RIDER COMMENT</th>
+                                <th>SENTIMENT</th>
+                                <th>CONFIDENCE</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,6 +80,10 @@
                             {% endfor %}
                         </tbody>
                     </table>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="{% url 'home' %}" class="btn btn-harley">ANALYZE ANOTHER FILE</a>
                 </div>
             </div>
         </div>

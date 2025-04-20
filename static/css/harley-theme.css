@@ -1,0 +1,224 @@
+/* 
+ * Harley Davidson Theme
+ * Colors: Black, Orange, and White
+ * A classic, bold, and rugged style inspired by Harley Davidson motorcycles
+ */
+
+:root {
+    --harley-black: #000000;
+    --harley-orange: #f7941d;
+    --harley-dark-orange: #e87500;
+    --harley-light-gray: #f0f0f0;
+    --harley-dark-gray: #2c2c2c;
+    --harley-white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    background-color: var(--harley-light-gray);
+    color: var(--harley-black);
+}
+
+/* Header Styling */
+.header-bg {
+    background-color: var(--harley-black);
+    color: var(--harley-white);
+    border-bottom: 4px solid var(--harley-orange);
+    text-transform: uppercase;
+    padding: 1.5rem 0;
+}
+
+.harley-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card-header {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.harley-card-header {
+    background-color: var(--harley-black);
+    color: var(--harley-white);
+    border-bottom: 3px solid var(--harley-orange);
+}
+
+/* Button Styling */
+.btn-harley {
+    background-color: var(--harley-orange);
+    border: none;
+    color: var(--harley-black);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-harley:hover, .btn-harley:focus {
+    background-color: var(--harley-dark-orange);
+    color: var(--harley-white);
+    box-shadow: 0 0 10px rgba(247, 148, 29, 0.5);
+}
+
+.btn-harley-outline {
+    background-color: transparent;
+    border: 2px solid var(--harley-orange);
+    color: var(--harley-orange);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.btn-harley-outline:hover, .btn-harley-outline:focus {
+    background-color: var(--harley-orange);
+    color: var(--harley-black);
+}
+
+.btn-harley-dark {
+    background-color: var(--harley-black);
+    border: 2px solid var(--harley-black);
+    color: var(--harley-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-harley-dark:hover, .btn-harley-dark:focus {
+    background-color: var(--harley-dark-gray);
+    border-color: var(--harley-dark-gray);
+    color: var(--harley-orange);
+}
+
+/* Form Styling */
+.form-control {
+    border: 2px solid var(--harley-dark-gray);
+    border-radius: 0;
+    padding: 0.7rem;
+}
+
+.form-control:focus {
+    border-color: var(--harley-orange);
+    box-shadow: 0 0 0 0.25rem rgba(247, 148, 29, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--harley-black);
+}
+
+/* Table Styling */
+.table {
+    border-collapse: collapse;
+}
+
+.harley-table thead th {
+    background-color: var(--harley-black);
+    color: var(--harley-white);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--harley-orange);
+}
+
+.harley-table tbody tr:nth-child(odd) {
+    background-color: var(--harley-light-gray);
+}
+
+.harley-table tbody tr:hover {
+    background-color: rgba(247, 148, 29, 0.1);
+}
+
+/* Sentiment Styling */
+.sentiment-positive {
+    color: var(--harley-orange);
+    font-weight: bold;
+}
+
+.sentiment-negative {
+    color: var(--harley-black);
+    font-weight: bold;
+}
+
+/* Progress Bars */
+.positive-bar {
+    background-color: var(--harley-orange);
+    height: 30px;
+}
+
+.negative-bar {
+    background-color: var(--harley-black);
+    height: 30px;
+}
+
+/* Alerts */
+.alert-harley-info {
+    background-color: var(--harley-light-gray);
+    border-left: 4px solid var(--harley-orange);
+    color: var(--harley-black);
+}
+
+.alert-harley-danger {
+    background-color: var(--harley-light-gray);
+    border-left: 4px solid var(--harley-black);
+    color: var(--harley-black);
+}
+
+/* Badges */
+.badge-harley {
+    background-color: var(--harley-orange);
+    color: var(--harley-black);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-harley-dark {
+    background-color: var(--harley-black);
+    color: var(--harley-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* List Group */
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+}
+
+.list-group-item:first-child {
+    border-top: none;
+}
+
+/* Footer Styling */
+.footer-harley {
+    background-color: var(--harley-black);
+    color: var(--harley-white);
+    padding: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-top: 4px solid var(--harley-orange);
+}
+
+/* Custom Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
